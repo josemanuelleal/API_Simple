@@ -3,14 +3,12 @@ const _ = require("lodash");
 
 const app = express();
 
-// =======================================================
 // DEMO DEVSECOPS
 // Vulnerabilidades intencionadas para enseñar el pipeline
-// =======================================================
 
-// ❌ 1) Secreto falso para que Gitleaks lo detecte.
+// 1) Secreto falso para que Gitleaks lo detecte.
 // No es real. Es solo para la demo.
-const DEMO_GITHUB_TOKEN = "ghp_1234567890FAKESECRET1234567890FAKESECRET";
+// const DEMO_GITHUB_TOKEN = "ghp_1234567890FAKESECRET1234567890FAKESECRET";
 
 // Endpoint principal
 app.get("/", (req, res) => {
@@ -29,7 +27,7 @@ app.get("/health", (req, res) => {
   res.json({ status: "ok" });
 });
 
-// ❌ 2) Vulnerabilidad SAST para Semgrep: uso de eval()
+// 2) Vulnerabilidad SAST para Semgrep: uso de eval()
 app.get("/search", (req, res) => {
   const q = req.query.q || "console.log('sin query')";
 
