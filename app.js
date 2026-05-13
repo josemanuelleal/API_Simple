@@ -8,7 +8,6 @@ const app = express();
 
 // 1) Secreto falso para que Gitleaks lo detecte.
 // No es real. Es solo para la demo.
-// const DEMO_GITHUB_TOKEN = "ghp_1234567890FAKESECRET1234567890FAKESECRET";
 
 // Endpoint principal
 app.get("/", (req, res) => {
