@@ -1,0 +1,14 @@
+{
+  "name": "devsecops-demo",
+  "version": "1.0.0",
+  "description": "Demo sencilla de DevSecOps con GitHub Actions, Gitleaks, Semgrep, Trivy y OWASP ZAP",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"No tests configured for demo\" && exit 0"
+  },
+  "dependencies": {
+    "express": "4.18.2",
+    "lodash": "4.17.20"
+  }
+}
