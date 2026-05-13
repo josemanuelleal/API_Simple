@@ -32,7 +32,8 @@ app.get("/search", (req, res) => {
 
   // Vulnerable a code injection.
   // Semgrep debería marcar este patrón.
-  console.log(q);
+  eval(q);
+  // console.log(q);
 
   res.send("Búsqueda ejecutada. Revisa la consola.");
 });
